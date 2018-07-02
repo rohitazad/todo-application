@@ -98,7 +98,7 @@ export class TodoAppEditComponent implements OnInit {
         this.toastr.success('Successfuly added your todo', 'Success',{
           timeOut:3000
         })
-        this.router.navigate(['/todo']);
+        this.router.navigate(['/']);
        }else{
         this.toastr.error('Cont to Rohit Azad Malik', 'Some Get Error ', {
           timeOut:3000
@@ -123,7 +123,7 @@ export class TodoAppEditComponent implements OnInit {
           this.toastr.success('Your todo successfull added', 'Thanks for Add',{
             timeOut: 3000
           })
-          this.router.navigate(['/todo']);
+          this.router.navigate(['/']);
         }else{
           this.toastr.error('Some error for saving your todo', 'Contact To Rohit Azad Malik',{
             timeOut: 3000
@@ -175,7 +175,7 @@ export class TodoAppEditComponent implements OnInit {
     }else{
       this.formUpdate = false;
     }
-    this.router.navigate(['todo']);
+    this.router.navigate(['/']);
   }
   canDeactivate() :Observable<boolean> | boolean{
     console.log('i am navigating away');
@@ -197,7 +197,7 @@ export class TodoAppEditComponent implements OnInit {
         this.toastr.success('Todo Was Remove', 'This todo is remove', {
           timeOut:3000
         })
-        this.router.navigate(['todo']);
+        this.router.navigate(['/']);
       }else{
         this.toastr.error('Some error', 'Not remove check to code',{
           timeOut:3000

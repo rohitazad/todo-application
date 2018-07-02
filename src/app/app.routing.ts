@@ -14,17 +14,10 @@ import { BreadcrumbComponent } from 'src/app/rohit-azad/breadcrumb/breadcrumb.co
 const appRoutes : Routes  = [
     {
         path:'', 
-        redirectTo: 'todo',
-        pathMatch: 'full'
+        component:TodoAppComponent
     },
     
-    {
-        path:'todo',
-        component:TodoAppComponent,
-        data: {
-            breadcrumb: 'Todo-List'
-        }
-    },
+    
     {
         path:'add-todo', 
         component:TodoAppEditComponent, 
@@ -40,6 +33,10 @@ const appRoutes : Routes  = [
         data: {
             breadcrumb: 'Todo-Edit'
         }
+    },
+    {
+        path:'**',
+        redirectTo:'todo'
     }
     
 ]
